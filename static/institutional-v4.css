@@ -1,0 +1,77 @@
+
+/* University Institutional Design System — v4 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap');
+:root{--navy:#102b4c;--navy-dark:#071b32;--navy-soft:#244765;--cream:#f6f3ec;--paper:#fff;--gold:#b28b45;--gold-light:#ebd8ae;--ink:#23374e;--muted:#65758a;--line:#e2e6e9;--shadow:0 6px 24px rgba(15,39,68,.07)}
+html{scroll-behavior:smooth;scroll-padding-top:115px}
+body{font-family:"Noto Sans Thai",Tahoma,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:#e8d4a6;color:#142c46}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#edeae3}
+::-webkit-scrollbar-thumb{background:#a8b3bf;border:2px solid #edeae3;border-radius:12px}
+::-webkit-scrollbar-thumb:hover{background:#657b92}
+header{position:sticky;top:0;z-index:8;min-height:90px;background:var(--navy);border-bottom:4px solid var(--gold);display:flex;align-items:center;gap:24px;box-shadow:0 8px 26px #071b3226}
+.brand{font-size:16px;line-height:1.3;font-weight:800;letter-spacing:0;color:#fff;flex-shrink:0}
+.brand small{font-size:10px;letter-spacing:1.5px;color:var(--gold-light)}
+.university-logo{width:48px;height:48px;min-width:48px;display:grid;place-items:center;background:#fff;color:var(--navy);border:2px solid var(--gold);border-radius:50%;font-family:Georgia,serif;font-size:24px;font-weight:700}
+.topnav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.topnav a{color:#f4f6f8;text-decoration:none;font-size:13px;white-space:nowrap;position:relative}
+.topnav a::after{content:"";height:2px;background:var(--gold-light);position:absolute;left:0;right:100%;bottom:-7px;transition:right .2s}
+.topnav a:hover::after{right:0}
+.topnav .ghost{background:#ffffff15;border:1px solid #ffffff45;color:white;font-size:12px}
+.header-actions{display:flex;align-items:center;gap:12px;margin-left:auto}
+.admin-quick-link{display:inline-flex;align-items:center;gap:7px;padding:11px 15px;background:var(--gold-light);color:var(--navy-dark);text-decoration:none;font-size:12px;font-weight:800;border:1px solid #e8c986;border-radius:5px;white-space:nowrap;box-shadow:0 2px 7px #0002;transition:background .2s,transform .2s}
+.admin-quick-link:hover{background:#fff1d0;transform:translateY(-2px)}
+main{padding-top:28px}
+.campus-banner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 25px;background:linear-gradient(105deg,#0d2a4b,#264969);border-left:5px solid var(--gold);border-radius:5px;box-shadow:var(--shadow);font-size:13px}
+.campus-banner span:first-child{font-size:10px;letter-spacing:1.5px;color:var(--gold-light);font-weight:800}
+.hero h1{font-size:clamp(28px,3vw,42px);font-weight:800}
+.panel,.metric{background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+.panel{padding:26px}
+.panel h2{font-size:19px}
+.metric{border-top:4px solid var(--gold);transition:transform .2s,box-shadow .2s}
+.metric:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0f274414}
+.metric strong{font-variant-numeric:tabular-nums}
+.project{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.project:hover{transform:translateY(-2px);box-shadow:0 12px 24px #102b4c12;border-color:#d0c2a4}
+.project h3{font-size:16px}
+button,.admin-quick-link{min-height:38px}
+button{font-weight:600;transition:transform .18s,box-shadow .18s,background-color .18s,filter .18s}
+button:active{transform:scale(.98)}
+button:focus-visible,a:focus-visible{outline:3px solid #c89c50;outline-offset:3px}
+input,select,textarea{width:auto;min-height:44px;padding:11px 13px;border:1px solid #c7d0d9;border-radius:7px;background:#fff;color:#203348;box-shadow:inset 0 1px 2px #112d4510;transition:border-color .18s,box-shadow .18s,background-color .18s}
+input:hover,select:hover,textarea:hover{border-color:#8297aa}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold);box-shadow:0 0 0 4px #b28b4526;background:#fff}
+input::placeholder,textarea::placeholder{color:#8c99a6}
+input:disabled,select:disabled,textarea:disabled{background:#eff1f3;color:#75818d;cursor:not-allowed}
+input[type="file"]{padding:10px;background:#f9fafb;cursor:pointer}
+input[type="file"]::file-selector-button{background:var(--navy);color:white;border:0;border-radius:5px;padding:8px 12px;margin-right:12px;cursor:pointer}
+input[type="checkbox"],input[type="radio"]{width:auto;min-height:0;accent-color:var(--navy)}
+select{appearance:none;padding-right:36px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10'%3E%3Cpath d='m2 2 5 5 5-5' fill='none' stroke='%23102b4c' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-position:right 12px center;background-repeat:no-repeat}
+textarea{resize:vertical;min-height:95px}
+.filters input{min-width:175px}
+label{font-weight:600}
+.account-button{border-radius:6px;min-height:50px}
+.account-menu{z-index:20;border-radius:8px;animation:menuReveal .2s ease both}
+.account-menu button,.account-menu a{font-size:13px}
+.auth .panel{max-width:510px;border-top:5px solid var(--gold);animation:rise .55s ease both}
+.auth h1{font-size:30px}
+.dialog{border-radius:12px;animation:dialogReveal .24s cubic-bezier(.2,.7,.2,1) both}
+.overlay{animation:fadeIn .2s ease both;backdrop-filter:blur(3px)}
+#toast{border-radius:8px;box-shadow:0 12px 35px #061b3266}
+.historyitem{transition:background .2s;padding:14px 8px;border-radius:4px}
+.historyitem:hover{background:#f8f6f0}
+.chatmessages{scrollbar-width:thin;scrollbar-color:#aab6c0 #f8f5ed}
+.chatcontacts{scrollbar-width:thin}
+.bubble{animation:rise .22s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes dialogReveal{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes menuReveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+.metrics .metric:nth-child(1){animation:rise .35s both}
+.metrics .metric:nth-child(2){animation:rise .4s .06s both}
+.metrics .metric:nth-child(3){animation:rise .45s .12s both}
+.metrics .metric:nth-child(4){animation:rise .5s .18s both}
+@media(max-width:1200px){header{flex-wrap:wrap;gap:12px}.topnav{order:3;width:100%;justify-content:center;border-top:1px solid #ffffff2b;padding-top:9px}.header-actions{margin-left:auto}}
+@media(max-width:680px){header{padding:12px 18px}.brand{font-size:13px}.university-logo{width:40px;height:40px;min-width:40px}.header-actions{width:100%;justify-content:space-between}.topnav{gap:10px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap}.topnav a{font-size:12px}.campus-banner{flex-direction:column;align-items:flex-start;gap:4px}.admin-quick-link{font-size:11px}.panel{padding:18px}.dialog{padding:18px}.filters input{min-width:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
